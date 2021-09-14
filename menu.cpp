@@ -4,6 +4,8 @@
 using namespace std;
 
 void menu();
+void patient();
+void doctor();
 
 int main ()
 {
@@ -99,3 +101,45 @@ case 5:
 }
 
 }
+
+void doctor(){
+    int c,x,code,response;
+    x=1565;
+cout<<"Enter password:";
+cin>>code;
+if(code==x){
+cout<<"=================Choose your option from listed below==============";
+ cout<<"\n\n1.display patients information\n";
+ cout<<"2.doctors note for patient\n";
+ cout<<"3.back\n";
+
+ cout<<"enter your option: ";
+ cin>>c;
+ cout<<endl;
+
+ switch(c){
+ case 1:
+     system("cls");
+     display();//calling display funtion
+
+     break;
+ case 2:
+     system("cls");
+     medicalTip();//calling medical tip function
+    break;
+
+case 3:
+     system("cls");
+     menu();//if the user press 3 it return to menu function
+
+    break;
+ }}
+ else
+{cout<<"\nIncorrect password!!!Please try again\n "<<endl;}
+ do{
+    cout<<"\npress 1 to go back: ";
+    cin>>response;
+    }while(response!=1);
+     system("cls");
+     doctor();
+ }
